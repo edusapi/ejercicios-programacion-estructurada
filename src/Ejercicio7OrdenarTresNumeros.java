@@ -10,7 +10,7 @@ public class Ejercicio7OrdenarTresNumeros {
                 E J E R C I C I O  7
                 ********************
                 
-                Programa que ordena 3 números
+                Programa que ordena 3 números de menor a mayor
                                 
                 """;
 
@@ -30,24 +30,35 @@ public class Ejercicio7OrdenarTresNumeros {
         }
 
         if (esValido){
-            System.out.println("\n\nPuntuaciones iniciales:");
-            System.out.printf("numero 1: %5d \n",numero1);
-            System.out.printf("numero 2: %5d \n",numero2);
-            System.out.printf("numero 3: %5d \n",numero3);
+            System.out.println("\n Números ordenados de menor a mayor");
 
-            int aux = numero1;
-            numero1 = numero2;
-            numero2 = numero3;
-            numero3 = aux;
+            //El número 1 es el mayor
+            if (numero1 > numero2 && numero1 > numero3){
+                if (numero2 > numero3){
+                    System.out.printf("El orden es el siguiente %d %d %d",numero3,numero2,numero1);
+                } else {
+                    System.out.printf("El orden es el siguiente %d %d %d",numero2,numero3,numero1);
+                }
 
+            //El número 2 es el mayor
+            } else if (numero2 > numero1 && numero2 > numero3) {
+                if (numero1 > numero3){
+                    System.out.printf("El orden es el siguiente %d %d %d",numero3,numero1,numero2);
+                } else {
+                    System.out.printf("El orden es el siguiente %d %d %d",numero1,numero3,numero2);
+                }
+            } else{
+                //El número 3 es el mayor, si o si
+                if (numero1 > numero2){
+                    System.out.printf("El orden es el siguiente %d %d %d",numero2,numero1,numero3);
+                } else {
+                    System.out.printf("El orden es el siguiente %d %d %d",numero1,numero2,numero3);
+                }
+            }
 
-            System.out.println("\n\nPuntuaciones después de la reorganización:");
-            System.out.printf("numero 1: %5d\n",numero1);
-            System.out.printf("numero 2: %5d\n",numero2);
-            System.out.printf("numero 3: %5d\n",numero3);
 
         } else {
-            System.out.println("Por tanto no se han podido intercambiar.");
+            System.out.println("Por tanto no se han podido ordenar.");
         }
 
     }

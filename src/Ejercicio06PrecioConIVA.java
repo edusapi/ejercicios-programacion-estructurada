@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejercicio6PrecioConIVA {
+public class Ejercicio06PrecioConIVA {
     public static void main(String[] args) {
         
             Scanner sc = new Scanner(System.in);

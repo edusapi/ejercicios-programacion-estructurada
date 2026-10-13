@@ -1,35 +1,49 @@
 import java.util.Scanner;
 
-public class Ejercicio8AnyoBisiesto {
+public class Ejercicio01NumeroPositivoNegativo {
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-        int anyo=0;
+        int numero=0;
         boolean esValido=false;
         String cabecera = """
                 
-                E J E R C I C I O  8
+                E J E R C I C I O  1
                 ********************
                 
-                Programa que determina si un año es bisiesto
+                Programa que determina si un número es positivo, negativo o cero
                                 
                 """;
 
         System.out.println(cabecera);
-        System.out.print("Introduce el año: ");
+        System.out.print("Introduce el número a determinar: ");
         try {
-            anyo = sc.nextInt();
+            numero = sc.nextInt();
             esValido = true;
         } catch (Exception e) {
             System.out.println("Valor no permitido.");
         }
 
         if (esValido){
-            boolean bisiesto = (anyo % 4 == 0 && anyo % 100 != 0) || (anyo % 400 == 0);
-            System.out.println(bisiesto?"El año es bisiesto":"El año no es bisiesto");
+
+            if(numero >= 0){
+                System.out.println("El número es positivo");
+            } else {
+                System.out.println("El número es negativo");
+            }
+
         }
 
-        //
+
+
+
+
+
+
+
+
+
+
+
     }
 
 

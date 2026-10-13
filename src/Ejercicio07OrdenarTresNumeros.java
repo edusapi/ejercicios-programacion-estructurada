@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejercicio7OrdenarTresNumeros {
+public class Ejercicio07OrdenarTresNumeros {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int numero1=0,numero2=0,numero3=0;

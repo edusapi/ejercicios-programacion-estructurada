@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejercicio2IntercambioDeVariables {
+public class Ejercicio02IntercambioDeVariables {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int jugador1=0,jugador2=0,jugador3=0;

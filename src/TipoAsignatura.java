@@ -1,0 +1,6 @@
+public enum TipoAsignatura {
+    PROGRAMACION,
+    BASES_DE_DATOS,
+    ENTORNOS_DE_DESARROLLO,
+    LENGUAJES_DE_MARCAS
+}

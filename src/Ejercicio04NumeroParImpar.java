@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejercicio4NumeroParImpar {
+public class Ejercicio04NumeroParImpar {
     public static void main(String[] args) {
 
 

@@ -17,13 +17,26 @@ public class Ejercicio3NumeroDivisible {
 
         System.out.println(cabecera);
         try {
-
-
+            System.out.print("Introduce el primer número:");
+            numero1 = sc.nextInt();
+            System.out.print("Introduce el segundo número:");
+            numero2 = sc.nextInt();
+            esValido = true;
 
         } catch (Exception e) {
             System.out.println("Los números deben de ser enteros. No se puede realizar la operación");
         }
 
+        if (esValido){
+            //Si el resto es cero
+            if(numero1 % numero2 == 0){
+                System.out.printf("El número %d es divisible por %d",numero1,numero2);
+            } else {
+                System.out.printf("El número %d NO es divisible por %d",numero1,numero2);
+            }
+
+
+        }
 
     }
 

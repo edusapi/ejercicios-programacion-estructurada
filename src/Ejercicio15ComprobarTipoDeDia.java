@@ -1,19 +1,17 @@
-import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
-public class Ejercicio14ClasificacionDeUnaAsignatura {
+public class Ejercicio15ComprobarTipoDeDia {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String opcion = "";
 
         String cabecera = """
                 
-                E J E R C I C I O  14
+                E J E R C I C I O  15
                 *********************
                 
-                El programa muestra un menú con las asignaturas disponibles y el usuario deberá seleccionar la opción
-                que desea con un número (del 1 al número de asignaturas). 
-                Una vez seleccionada la asignatura, muestra un mensaje indicando el tipo de asignatura elegido
+                El programa muestra un menú con los días de la semana.
+                Debes seleccionar uno de ellos y te mostrará si es laborable o fin de semana
                 
                 """;
         String menu = """

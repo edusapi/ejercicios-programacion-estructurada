@@ -10,6 +10,7 @@ public class Ejercicio14ClasificacionDeUnaAsignatura {
                 
                 E J E R C I C I O  14
                 *********************
+                
                 El programa muestra un menú con las asignaturas disponibles y el usuario deberá seleccionar la opción
                 que desea con un número (del 1 al número de asignaturas). 
                 Una vez seleccionada la asignatura, muestra un mensaje indicando el tipo de asignatura elegido

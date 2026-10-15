@@ -4,6 +4,8 @@ public class Ejercicio15ComprobarTipoDeDia {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String opcion = "";
+        DiaSemana diaSemana;
+        String diaSemanaTexto;
 
         String cabecera = """
                 
@@ -12,32 +14,51 @@ public class Ejercicio15ComprobarTipoDeDia {
                 
                 El programa muestra un menú con los días de la semana.
                 Debes seleccionar uno de ellos y te mostrará si es laborable o fin de semana
-                
                 """;
         String menu = """
-                
-                
-                MENU
-                ****
-                
-                1. Programación
-                2. Bases de datos
-                3. Entornos de desarrollo
-                4. Lenguajes de marcas
-                          
-                Selecciona una asignatura [1-4]:""";
+        \nMENU
+        ****       
+        """;
 
         System.out.println(cabecera);
-        System.out.println(menu);
 
-        opcion = scanner.nextLine();
+        do {
+            System.out.print(menu);
+            for (int i = 0; i < DiaSemana.values().length; i++) {
+                System.out.printf(" %d- %s \n", (i + 1), DiaSemana.values()[i]);
+            }
 
-        if (opcion.matches("[1-4]")){
-            System.out.println("Has seleccionado " + TipoAsignatura.values()[1]);
+            System.out.printf("Introduce un valor [1-%d]= ", DiaSemana.values().length);
+
+            opcion = scanner.nextLine();
+
+            if (!opcion.matches("[1-" + DiaSemana.values().length + "]")) {
+                System.out.printf("Debes de introducir un valor entre 1 y %d \n", DiaSemana.values().length);
+            }
+
+        } while (!opcion.matches("[1-" + DiaSemana.values().length + "]"));
+
+        // Convertimos opcion a entero y cogemos el valor correspondiente del array de valores del enum
+        diaSemana = DiaSemana.values()[Integer.parseInt(opcion)-1];
+        diaSemanaTexto = diaSemana.name();
+
+        diaSemanaTexto = diaSemanaTexto.substring(0,1).toUpperCase() + diaSemanaTexto.substring(1).toLowerCase();
+
+
+        switch (diaSemana){
+            case LUNES, MARTES, MIERCOLES, JUEVES, VIERNES :
+                System.out.print(diaSemanaTexto + " es entre semana.");
+                break;
+
+            case SABADO, DOMINGO :
+                System.out.print(diaSemanaTexto + " es fin de semana.");
+                break;
+            }
+
         }
 
-        //TipoAsignatura.
+
 
 
     }
-}
+

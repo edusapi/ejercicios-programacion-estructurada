@@ -40,14 +40,34 @@ public class Ejercicio15ComprobarTipoDeDia {
 
         // Convertimos opcion a entero y cogemos el valor correspondiente del array de valores del enum
 
-        diaSemana = diasSemana[Integer.parseInt(opcion)];
-        switch (diaSemana){
-            case LUNES, MARTES, MIERCOLES, JUEVES, VIERNES :
+        switch (Integer.parseInt(opcion)){
+            case 1 :
+                diaSemana = DiaSemana.LUNES;
                 System.out.print(diaSemana + " es entre semana.");
                 break;
-
-            case SABADO, DOMINGO :
-                System.out.print(diaSemana + " es fin de semana.");
+            case 2 :
+                diaSemana = DiaSemana.MARTES;
+                System.out.print(diaSemana + " es entre semana.");
+                break;
+            case 3 :
+                diaSemana = DiaSemana.MIERCOLES;
+                System.out.print(diaSemana + " es entre semana.");
+                break;
+            case 4 :
+                diaSemana = DiaSemana.JUEVES;
+                System.out.print(diaSemana + " es entre semana.");
+                break;
+            case 5 :
+                diaSemana = DiaSemana.VIERNES;
+                System.out.print(diaSemana + " es entre semana.");
+                break;
+            case 6 :
+                diaSemana = DiaSemana.SABADO;
+                System.out.print(diaSemana + " es entre semana.");
+                break;
+            case 7 :
+                diaSemana = DiaSemana.DOMINGO;
+                System.out.print(diaSemana + " es entre semana.");
                 break;
             }
 

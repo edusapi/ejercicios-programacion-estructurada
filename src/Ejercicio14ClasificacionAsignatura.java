@@ -5,6 +5,8 @@ public class Ejercicio14ClasificacionAsignatura {
         Scanner scanner = new Scanner(System.in);
         int opcion = 0;
         TipoAsignatura asignaturas[] = TipoAsignatura.values();
+        TipoAsignatura tipoAsignatura;
+
         /*
         Guardo todos los valores del enum en un vector de tipo TipoAsignatura. Es decir se guarda:
 
@@ -52,11 +54,9 @@ public class Ejercicio14ClasificacionAsignatura {
 
         } while (!(opcion > 0 && opcion <= asignaturas.length));
 
-        // Vamos a guardar la opción seleccionada en una variable de tipo Enum llamada tipoAsignatura
-        TipoAsignatura tipoAsignatura = null;
 
         //Opción vale de 1 a 4.
-        switch (opcion){
+        /*switch (opcion){
             case 1:
                 tipoAsignatura = TipoAsignatura.PROGRAMACION;
                 break;
@@ -70,7 +70,9 @@ public class Ejercicio14ClasificacionAsignatura {
                 tipoAsignatura = TipoAsignatura.LENGUAJES_DE_MARCAS;
                 break;
 
-            }
+            }*/
+
+        tipoAsignatura = asignaturas[opcion-1];
 
         System.out.println("La asignatura seleccionada es " + tipoAsignatura);
         }

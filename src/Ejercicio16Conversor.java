@@ -6,6 +6,7 @@ public class Ejercicio16Conversor {
         Scanner scanner = new Scanner(System.in);
         String opcion = "";
         TipoConversion tipoConversion;
+        TipoConversion[] tipoConversiones = TipoConversion.values();
         double temperaturaMedida = 0;
         boolean esValido = false;
         final double FACTOR_CONVERSION_METROS_PIES = 3.28084;
@@ -29,21 +30,21 @@ public class Ejercicio16Conversor {
 
         do {
             System.out.print(menu);
-            for (int i = 0; i < TipoConversion.values().length; i++) {
-                System.out.printf(" %d- %s \n", (i + 1), TipoConversion.values()[i].name().replace("_", " "));
+            for (int i = 0; i < tipoConversiones.length; i++) {
+                System.out.printf(" %d- %s \n", (i + 1), tipoConversiones[i].name().replace("_", " "));
             }
 
-            System.out.printf("\nIntroduce un valor [1-%d]= ", TipoConversion.values().length);
+            System.out.printf("\nIntroduce un valor [1-%d]= ", tipoConversiones.length);
 
             opcion = scanner.nextLine();
 
-            if (!opcion.matches("[1-" + TipoConversion.values().length + "]")) {
-                System.out.printf("Debes de introducir un valor entre 1 y %d \n", TipoConversion.values().length);
+            if (!opcion.matches("[1-" + tipoConversiones.length + "]")) {
+                System.out.printf("Debes de introducir un valor entre 1 y %d \n", tipoConversiones.length);
             }
 
-        } while (!opcion.matches("[1-" + TipoConversion.values().length + "]"));
+        } while (!opcion.matches("[1-" + tipoConversiones.length + "]"));
 
-        tipoConversion = TipoConversion.values()[Integer.parseInt(opcion) - 1];
+        tipoConversion = tipoConversiones[Integer.parseInt(opcion) - 1];
 
         System.out.print("Introduce la temperatura/medida: ");
 

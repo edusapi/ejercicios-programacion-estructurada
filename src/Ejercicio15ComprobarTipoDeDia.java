@@ -4,6 +4,7 @@ public class Ejercicio15ComprobarTipoDeDia {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String opcion = "";
+        DiaSemana[] diasSemana = DiaSemana.values();
         DiaSemana diaSemana;
         String diaSemanaTexto;
 
@@ -39,10 +40,6 @@ public class Ejercicio15ComprobarTipoDeDia {
         } while (!opcion.matches("[1-" + DiaSemana.values().length + "]"));
 
         // Convertimos opcion a entero y cogemos el valor correspondiente del array de valores del enum
-        diaSemana = DiaSemana.values()[Integer.parseInt(opcion)-1];
-        diaSemanaTexto = diaSemana.name();
-
-        diaSemanaTexto = diaSemanaTexto.substring(0,1).toUpperCase() + diaSemanaTexto.substring(1).toLowerCase();
 
 
         switch (diaSemana){

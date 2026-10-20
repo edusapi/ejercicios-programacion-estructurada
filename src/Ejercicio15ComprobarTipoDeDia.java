@@ -6,7 +6,6 @@ public class Ejercicio15ComprobarTipoDeDia {
         String opcion = "";
         DiaSemana[] diasSemana = DiaSemana.values();
         DiaSemana diaSemana;
-        String diaSemanaTexto;
 
         String cabecera = """
                 
@@ -25,30 +24,30 @@ public class Ejercicio15ComprobarTipoDeDia {
 
         do {
             System.out.print(menu);
-            for (int i = 0; i < DiaSemana.values().length; i++) {
-                System.out.printf(" %d- %s \n", (i + 1), DiaSemana.values()[i]);
+            for (int i = 0; i < diasSemana.length; i++) {
+                System.out.printf(" %d- %s \n", (i + 1), diasSemana[i]);
             }
 
-            System.out.printf("Introduce un valor [1-%d]= ", DiaSemana.values().length);
+            System.out.printf("Introduce un valor [1-%d]= ", diasSemana.length);
 
             opcion = scanner.nextLine();
 
-            if (!opcion.matches("[1-" + DiaSemana.values().length + "]")) {
-                System.out.printf("Debes de introducir un valor entre 1 y %d \n", DiaSemana.values().length);
+            if (!opcion.matches("[1-" + diasSemana.length + "]")) {
+                System.out.printf("Debes de introducir un valor entre 1 y %d \n", diasSemana.length);
             }
 
-        } while (!opcion.matches("[1-" + DiaSemana.values().length + "]"));
+        } while (!opcion.matches("[1-" + diasSemana.length + "]"));
 
         // Convertimos opcion a entero y cogemos el valor correspondiente del array de valores del enum
 
-
+        diaSemana = diasSemana[Integer.parseInt(opcion)];
         switch (diaSemana){
             case LUNES, MARTES, MIERCOLES, JUEVES, VIERNES :
-                System.out.print(diaSemanaTexto + " es entre semana.");
+                System.out.print(diaSemana + " es entre semana.");
                 break;
 
             case SABADO, DOMINGO :
-                System.out.print(diaSemanaTexto + " es fin de semana.");
+                System.out.print(diaSemana + " es fin de semana.");
                 break;
             }
 

@@ -4,9 +4,6 @@ import java.util.Scanner;
 public class Ejercicio22IgnorarNumerosConContinue {
     public static void main(String[] args) {
 
-        boolean esValido = false;
-        int numeroUsuario = 0, numeroAux, numeroCifras = 0, numeroPares = 0, numeroImpares = 0, cifra = 0;
-
         /*
     Crea un programa que solicite números enteros al usuario hasta que introduzca un `0`.
     El programa debe mostrar únicamente los números positivos.

@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Funciones {
@@ -28,5 +29,14 @@ public class Funciones {
         }
 
         return scanner.nextDouble();
+    }
+
+    public static int dameEnteroAleatorio(int min,int max){
+        Random random = new Random();
+
+        return random.nextInt(max-min+1)+min;
+
+
+
     }
 }

@@ -4,10 +4,7 @@ import java.util.Scanner;
 public class Ejercicio21SuperficieDeUnTriangulo {
     public static void main(String[] args) {
 
-        boolean esValido = false;
-        int numeroUsuario = 0, numeroAux, numeroCifras = 0, numeroPares = 0, numeroImpares = 0, cifra = 0;
-
-        /*
+         /*
     Calcula la superficie de un triángulo. El programa deberá:
     1. Pedir al usuario la **base** y la **altura**
     2. Comprobar que ambos valores sean positivos, si no lo son deberá ir al punto 5.
